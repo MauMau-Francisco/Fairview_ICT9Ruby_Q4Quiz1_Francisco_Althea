@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+                    <!-- head tag -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chica's BMI Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">                                   
+    body
+
+{
+        background-image: url('https://img.freepik.com/free-vector/hand-drawn-frailejon-plant-background_23-2150041947.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}	
+
+   h1{
+   	font-family: cursive;
+   	color: white;
+    background-color: #A4B494;
+    padding: 7px;
+    border-radius: 50px;
+   }
+
+    h4{
+   	font-family: cursive;
+   	color: grey;
+   }
+
+#bmi{
+      width: 300px;
+      height: 300px;
+	
+}
+
+
+</style>
+
+</head>
+
+                       <!-- body tag -->
+<body>
+	<br><br>
+<center>
+     <strong> <h1>Maru's BMI Calculator</h1><br></strong>
+      <h4> - Welcome to Maru's BMI Calculator! This website helps you calculate if you're Underweight, Normal Weight, Overweight, and Obese! Go Calculate Now!!</h4>
+
+<!-- Name and description -->
+
+<br><br>
+<!-- BMI IMAGE -->
+ <div style="border: 9px solid #A4B494; padding: 11px; width: 400px; center; margin: auto;" >
+<img id="bmi" src="BMICHART.png">
+</div>
+
+
+<br>
+
+
+<details class="text-center">
+        <summary> Open BMI Instructions <3 </summary> 
+
+            <!-- BMI intructions code -->
+<center>
+    1. Input your exact Height in meters!
+    <br>
+    (for decimals, simply add " . ")<br>
+    2. Input your exact weight in kilograms!<br>
+    3. Press "Calculate your BMI" and you're done.
+</center>
+
+</details>    
+
+
+<br><br> 
+
+    <!-- BMI CALCULATOR - calculates your bmi -->
+
+ 
+<label style="font-size: 22px;">Weight (kilograms): <input id="weight" type="number" style="background-color: #E1F0DA;"></label><br><br>
+<label style="font-size: 22px;">Height (meters): <input id="height" type="number" style="background-color: #E1F0DA;"></label><br><br> 
+
+ <!-- name -->
+
+<button class="btn btn-warning" onclick="calculateBMI()" style="background-color: #E1F0DA;">Go calculate your BMI! <3</button>
+<p id="bmi1"></p> 
+
+<br>
+<!-- script tag start -->
+<script>
+
+   function calculateBMI(){
+var weight = document.getElementById("weight").value;
+var height = document.getElementById("height").value;
+var bmi = weight / Math.pow(height, 2); 
+var bmitype = ""; 
+  
+// calculation
+
+   if (bmi < 18.5) {
+            bmitype = "Underweight.. go eat more..";
+ } else if (bmi < 24.9) {
+        bmitype = " You are Normal weight ( Good, Maintain it )";
+      } else if (bmi < 29.9) {
+          bmitype = "Overweight sadly";
+        } else {
+         bmitype = "You are very OBESE, go on a diet";
+     
+  }
+
+document.getElementById("bmi1").innerText = 
+            "Your BMI is " + bmi.toFixed(2) + " (" + bmitype + ")";
+             }  
+</script>
+
+               <!-- last tag -->
+<h1 style="font-size: 20px; text-align: center; font-family: cursive;"> Submitted by: Althea Francisco </h1>
+ <a href="https://docs.google.com/document/d/1sqLLz2JIhfCPl4J9WCfDrofHTfuuKAf0/edit?usp=sharing&ouid=104754855509072254616&rtpof=true&sd=true" target="new" style="text-align: center; font-size: 30px;"> References</a>
+
+
+</center>
+
+</body>
+</html>
